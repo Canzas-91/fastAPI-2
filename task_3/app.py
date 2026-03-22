@@ -12,15 +12,10 @@ sample_products = [
     {"product_id": 202, "name": "Smartwatch",  "category": "Electronics", "price": 299.99},
 ]
 
-# --- Задание 3.1 ---
-
 @app.post("/create_user")
 def create_user(user: UserCreate):
     return user
 
-# --- Задание 3.2 ---
-
-# ВАЖНО: /products/search объявлен ДО /product/{product_id}
 @app.get("/products/search")
 def search_products(
     keyword: str,
